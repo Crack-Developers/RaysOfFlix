@@ -25,15 +25,15 @@ const FooterImpLinks = [
   },
   {
     title: "About",
-    link: "/about",
+    link: "/aboutus",
   },
   {
     title: "Contact",
-    link: "/contact",
+    link: "#",
   },
   {
     title: "Services",
-    link: "/blog",
+    link: "#",
   },
 ];
 

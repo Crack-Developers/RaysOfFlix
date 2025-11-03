@@ -32,6 +32,13 @@ const Navbar = ({ handleOrderPopup }) => {
     setShowMenu(!showMenu);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <nav className="fixed top-0 right-0 w-full z-50 bg-white backdrop-blur-sm text-black shadow-md">
       <div className="bg-gradient-to-r from-primary to-secondary text-white">
@@ -57,8 +64,9 @@ const Navbar = ({ handleOrderPopup }) => {
             <ul className="flex items-center gap-6">
               {NavbarLinks.map((link) => (
                 <li key={link.name} className="py-4">
-                  <NavLink 
+                  <NavLink
                     to={link.link}
+                    onClick={scrollToTop}
                     className={({ isActive }) => (isActive ? "active" : "")}
                   >
                     {link.name}

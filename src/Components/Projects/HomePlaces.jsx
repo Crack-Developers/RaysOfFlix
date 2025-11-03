@@ -1,69 +1,77 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import PlaceCard from './PlaceCard';
-import Img1 from '../../assets/pro03.png';
-import Img2 from '../../assets/pro2.png';
-import Img3 from '../../assets/pro4.jpg';
-import Img4 from '../../assets/pro01.jpg';
-import Img5 from '../../assets/pro5.jpg';
-import Img6 from '../../assets/pro02.jpeg';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import PlaceCard from "./PlaceCard";
+import Img1 from "../../assets/pro03.png";
+import Img2 from "../../assets/pro2.png";
+import Img3 from "../../assets/pro4.jpg";
+import Img4 from "../../assets/pro01.jpg";
+import Img5 from "../../assets/pro5.jpg";
+import Img6 from "../../assets/pro02.jpeg";
 
 const PlacesData = [
   {
     img: Img2,
-    title: 'Pradeep kumar Music Concert',
-    location: 'Chidambaram',
+    title: "Pradeep kumar Music Concert",
+    location: "Chidambaram",
     description: "Promotional coverage for Pradeep Kumar's live music concert.",
     price: 2024,
-    type: 'Year',
+    type: "Year",
   },
   {
     img: Img5,
-    title: 'Song Editing',
-    location: 'Chenni',
-    description: 'Edited Video for Album Song.',
+    title: "Song Editing",
+    location: "Chenni",
+    description: "Edited Video for Album Song.",
     price: 2024,
-    type: 'Year',
+    type: "Year",
   },
   {
     img: Img4,
-    title: 'Video Editing',
-    location: 'Chennai',
-    description: 'Edited a vlog for a Serial actor.',
+    title: "Video Editing",
+    location: "Chennai",
+    description: "Edited a vlog for a Serial actor.",
     price: 2023,
-    type: 'Year',
+    type: "Year",
   },
   {
     img: Img6,
-    title: 'Movie Intro Editing',
-    location: 'Chennai',
-    description: 'Designed Intro for Movies.',
+    title: "Movie Intro Editing",
+    location: "Chennai",
+    description: "Designed Intro for Movies.",
     price: 2022,
-    type: 'Year',
+    type: "Year",
   },
   {
     img: Img3,
-    title: 'Moodar Teaser',
-    location: 'Chennai',
+    title: "Moodar Teaser",
+    location: "Chennai",
     description: "Teaser for the movie Moodar.",
     price: 2020,
-    type: 'Year',
+    type: "Year",
   },
   {
     img: Img1,
-    title: 'Presentation video',
-    location: 'Chennai',
-    description: 'Presentation video for Explora.',
+    title: "Presentation video",
+    location: "Chennai",
+    description: "Presentation video for Explora.",
     price: 2020,
-    type: 'Year',
+    type: "Year",
   },
 ];
 
 const Places = ({ handleOrderPopup }) => {
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const handleViewMoreClick = () => {
-    navigate('./Projects');
+    navigate("./Projects");
+    scrollToTop();
   };
 
   return (
